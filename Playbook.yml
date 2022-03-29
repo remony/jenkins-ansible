@@ -1,0 +1,9 @@
+---
+- hosts: k8s_master
+  become: true
+  become_user: root
+  tasks:
+   - name: Drain Worker Nodes
+     shell: kubectl get nodes 
+      
+     
